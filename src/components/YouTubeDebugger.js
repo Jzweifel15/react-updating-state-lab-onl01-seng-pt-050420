@@ -20,7 +20,6 @@ export default class YouTubeDebugger extends Component
   handleClick = () => {
     this.setState({
       settings: {
-        ...this.state.settings,
         birate: 12,
         video: {
           resolution: "720p"
