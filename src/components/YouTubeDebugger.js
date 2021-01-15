@@ -26,10 +26,23 @@ export default class YouTubeDebugger extends Component
     });
   }
 
+  changeResolution = () => {
+    this.setState({
+      settings: {
+        ...this.state.settings,
+        video: {
+          ...this.state.settings.video,
+          resolution: "720p"
+        }
+      }
+    })
+  }
+
   render()
   {
     return (
       <button className="bitrate" onClick={this.changeBitrate}></button>
+      <button className="resolution" onClick={this.changeResolution}></button>
     )
   }
 }
